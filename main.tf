@@ -5,26 +5,26 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "4.52.0"
+      version = "5.83.1"
     }
-    random = {
-      source  = "hashicorp/random"
-      version = "3.4.3"
-    }
+    # random = {
+    #   source  = "hashicorp/random"
+    #   version = "3.4.3"
+    # }
   }
-  required_version = ">= 1.1.0"
+  # required_version = ">= 1.1.0"
 
   cloud {
-    organization = "REPLACE_ME"
+    organization = "premiumwhorchatas"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "caipirinhacarioca"
     }
   }
 }
 
 provider "aws" {
-  region = "us-west-2"
+  region = "sa-east-1"
 }
 
 resource "random_pet" "sg" {}
